@@ -1,0 +1,89 @@
+/* 项目中重写elementui组件样式 */
+
+
+// 按钮样式
+.el-button--medium,
+.el-button--small {
+  border-radius: 18px;
+}
+
+.el-button--primary {
+  background-color: #247FFF !important;
+  border-radius: 18px;
+}
+
+.el-button--text {
+  background: rgb(211, 34, 34);
+  color: white;
+}
+
+.el-button--text.is-disabled {
+  background: rgb(237, 122, 122) !important;
+  color: white;
+}
+
+
+
+
+// 弹窗样式
+.el-dialog__footer,
+.el-dialog__header {
+  background: #F4F6FA;
+  padding: 10px;
+}
+
+.el-dialog__headerbtn {
+  color: red;
+  font-size: 20px;
+  position: absolute;
+  top: 13px !important;
+
+}
+
+.el-dialog__body {
+  padding: 0px 20px;
+  color: #606266;
+  font-size: 14px;
+  word-break: break-all;
+}
+
+.headingstyles {
+  color: #262C5A;
+  margin: 0px 0px 0px 6px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 60px;
+
+}
+
+.detailstitlo {
+  width: 100%;
+  height: 30px;
+  background-image: url(../../views/homeimges/图一.png);
+  margin: auto;
+  margin: 0 0 20px 0;
+
+}
+
+.xqtitolstyle {
+  color: white;
+
+  font-weight: 500;
+  font-size: 16px;
+
+  margin-left: 20px;
+  line-height: 30px;
+}
+
+
+// 表单禁用样式
+.el-input.is-disabled .el-input__inner {
+  color: black;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+// 按鈕标题提醒数字
+.el-badge__content {
+  z-index: 10;
+}

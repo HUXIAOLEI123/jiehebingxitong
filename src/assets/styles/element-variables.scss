@@ -1,0 +1,85 @@
+/* 修改elementui默认颜色. */
+
+
+/* Color */
+
+$--color-primary: #247FFF;
+$--color-success: #30BF78;
+$--color-warning: #FAAD14;
+// 弹窗+导出按钮提示色
+$--color-danger: red;
+$--color-text: #d72809;
+$--color-info: #FF8424 !default;
+$--color-white: #FFFFFF !default;
+$--color-black: #000000 !default;
+// $--color-info: #1E1E1E;
+$--button-font-weight: 400;
+/// color|1|Font Color|2
+$--color-text-primary: #303133 !default;
+/// color|1|Font Color|2
+$--color-text-regular: #606266 !default;
+/// color|1|Font Color|2
+$--color-text-secondary: #909399 !default;
+/// color|1|Font Color|2
+$--color-text-placeholder: #C0C4CC !default;
+/// color|1|Border Color|3
+$--border-color-base: #DCDFE6 !default;
+/// color|1|Border Color|3
+$--border-color-light: #E4E7ED !default;
+/// color|1|Border Color|3
+$--border-color-lighter: #EBEEF5 !default;
+/// color|1|Border Color|3
+$--border-color-extra-light: #F2F6FC !default;
+// Background
+/// color|1|Background Color|4
+$--background-color-base: #F5F7FA !default;
+
+/* table */
+
+$--table-border:1px solid#dfe6ec;
+
+/* font-size */
+
+/// fontSize|1|Font Size|0
+$--font-size-extra-large: 20px !default;
+/// fontSize|1|Font Size|0
+$--font-size-large: 18px !default;
+/// fontSize|1|Font Size|0
+$--font-size-medium: 16px !default;
+/// fontSize|1|Font Size|0
+$--font-size-base: 14px !default;
+/// fontSize|1|Font Size|0
+$--font-size-small: 13px !default;
+/// fontSize|1|Font Size|0
+$--font-size-extra-small: 12px !default;
+/// fontWeight|1|Font Weight|1
+$--font-weight-primary: 500 !default;
+/// fontWeight|1|Font Weight|1
+$--font-weight-secondary: 100 !default;
+/// fontLineHeight|1|Line Height|2
+$--font-line-height-primary: 24px !default;
+/// fontLineHeight|1|Line Height|2
+$--font-line-height-secondary: 16px !default;
+$--font-color-disabled-base: #bbb !default;
+
+/* Dialog
+-------------------------- */
+
+$--dialog-background-color: $--color-white !default;
+$--dialog-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !default;
+/// fontSize||Font|1
+$--dialog-title-font-size: $--font-size-large !default;
+/// fontSize||Font|1
+$--dialog-content-font-size: 14px !default;
+/// fontLineHeight||LineHeight|2
+$--dialog-font-line-height: $--font-line-height-primary !default;
+/// padding||Spacing|3
+$--dialog-padding-primary: 20px !default;
+
+/* icon font path, required */
+
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+@import "~element-ui/packages/theme-chalk/src/index";
+:export {
+    theme: $--color-primary;
+}

@@ -1,0 +1,18 @@
+:export {
+  menuText: #222222;
+  menuActiveText: #1B65B9;
+  menuActiveBg: #EAF7FF;
+  subMenuActiveText: #1B65B9;
+  menuBg: #FFFFFF;
+  menuHover: #EAF7FF;
+  subMenuBg: #FFFFFF;
+  subMenuHover: #EAF7FF;
+  sideBarWidth: 200px;
+  appHeaderHeight: 60px;
+  appHeaderSystemHeight: 60px;
+  navbarHeight: 0;
+  menuIcon: #37383A;
+  menuActiveIcon: #1B65B9;
+  baseSize: 16;
+}
+/*# sourceMappingURL=variables.css.map */

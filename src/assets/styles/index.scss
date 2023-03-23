@@ -1,0 +1,410 @@
+@import "./variables.scss";
+@import "./element-ui.scss";
+@import "./normalize.scss";
+@import "./transition.scss";
+@import './sidebar.scss';
+@import "../iconfont/iconfont.css";
+@import "./loading.scss";
+body {
+    height: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-family: Microsoft YaHei, PingFang SC, Helvetica Neue, Helvetica, Hiragino Sans GB, Arial, sans-serif;
+}
+
+label {
+    font-weight: 510;
+}
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+#app {
+    height: 100%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.no-padding {
+    padding: 0px !important;
+}
+
+.padding-content {
+    padding: 4px 0;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+    cursor: pointer;
+    color: inherit;
+    text-decoration: none;
+}
+
+div:focus {
+    outline: none;
+}
+
+
+/* 查询表单el-row 和el-col 样式开始 */
+
+.form_row {
+    .el-form-item {
+        display: flex;
+        .el-form-item__content {
+            flex: 1;
+            margin-left: 0 !important;
+            .el-select,
+            .el-date-editor {
+                width: 100%;
+            }
+        }
+        .el-input-number {
+            width: 100%;
+            .el-input__inner {
+                text-align: left;
+            }
+        }
+    }
+}
+
+// 组件根节点
+.com-root {
+    box-sizing: border-box;
+    padding: 15px 20px;
+    // position: absolute;
+    width: 100%;
+}
+
+.fr {
+    float: right;
+}
+
+.fl {
+    float: left;
+}
+
+.pt5 {
+    padding-top: 5px;
+}
+
+.pr5 {
+    padding-right: 5px;
+}
+
+.pb5 {
+    padding-bottom: 5px;
+}
+
+.mt5 {
+    margin-top: 5px;
+}
+
+.mr5 {
+    margin-right: 5px;
+}
+
+.mb5 {
+    margin-bottom: 5px;
+}
+
+.mb8 {
+    margin-bottom: 8px;
+}
+
+.ml5 {
+    margin-left: 5px;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.mr10 {
+    margin-right: 10px;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
+.ml10 {
+    margin-left: 10px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.mr20 {
+    margin-right: 20px;
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+.ml20 {
+    margin-left: 20px;
+}
+
+.text-center {
+    text-align: center
+}
+
+
+/* text color */
+
+.text-navy {
+    color: red;
+}
+
+.text-primary {
+    color: inherit;
+}
+
+.text-success {
+    color: #1c84c6;
+}
+
+.text-info {
+    color: red;
+}
+
+.text-warning {
+    color: #f8ac59;
+}
+
+.text-danger {
+    color: #ed5565;
+}
+
+.text-muted {
+    color: #888888;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+
+.block {
+    display: block;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.inlineBlock {
+    display: block;
+}
+
+.clearfix {
+    &:after {
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+    }
+}
+
+.top-right-btn {
+    position: relative;
+    float: right;
+}
+
+// fieldset
+fieldset {
+    border: 1px solid rgb(220, 223, 230);
+    legend {
+        letter-spacing: 5px;
+        font-size: 14px;
+    }
+}
+
+
+/* image */
+
+.img-circle {
+    border-radius: 50%;
+}
+
+.img-lg {
+    width: 120px;
+    height: 120px;
+}
+
+.avatar-upload-preview {
+    position: absolute;
+    top: 50%;
+    transform: translate(50%, -50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 4px #ccc;
+    overflow: hidden;
+}
+
+// vxe-table 表格头部背景色
+.vxe-table--header-wrapper {
+	color: #373737 !important;
+    font-size: 16px !important;
+    background-color: $base-table-header-bg!important;
+	font-family: MicrosoftYaHei-Bold-, MicrosoftYaHei-Bold !important;
+}
+
+// 表格的页面总体布局(滚动溢出消除滚动条)
+.box{
+    padding-top: 20px;
+    margin-top: 20px;
+    // width: 1230px;
+    width: 100%;
+    margin-right: 100px;
+    // height: 87vh;
+
+     background: white;
+    box-shadow: 0px 10px 20px 1px rgba(0, 0, 0, 0.0500);
+    border-radius: 10px 10px 10px 10px;
+    opacity: 1;
+    border: 1px solid #D8D8D8;
+    padding-left: 20px;
+    // 溢出滚动
+    // overflow: auto;
+  // 消除滚动条
+    // overflow-x: hidden;
+    // overflow-y: scroll;
+}
+.box>.room{
+    width: 100%;
+    height: 93%;
+    background: white;
+    opacity: 1;
+   
+}
+
+body{
+    // padding-right: 20px;
+    background:#E7ECF7;
+    padding-bottom: 20px;
+}
+// 整个滚动条
+// .box::-webkit-scrollbar {
+//     // display: none;
+//   width: 5px;
+//   height: 5px;
+//   background-color: rgba(0, 0, 0, 0);
+//   }
+   
+  /*定义滑块 内阴影+圆角*/
+//   .box::-webkit-scrollbar-thumb {
+//   border-radius: 5px;
+//   // -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+//   background-color: #D8D8D8;
+ 
+//   }
+   
+  /*定义滚动条轨道 内阴影+圆角*/
+//   .box::-webkit-scrollbar-track {
+//   // -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+//   border-radius: 5px;
+//   background-color: transparent;
+  
+//   }
+
+
+  .root_compont {
+    padding-top: 20px;
+}
+
+
+// 表格内修数据 链接样式
+.flex_center {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.flex_sb {
+    justify-content: space-between;
+}
+
+// 表格的滚动条样式
+.mytable-scrollbar ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  /*滚动条的轨道*/
+  .mytable-scrollbar ::-webkit-scrollbar-track {
+    background-color: #FFFFFF;
+  }
+  /*滚动条里面的小方块，能向上向下移动*/
+  .mytable-scrollbar ::-webkit-scrollbar-thumb {
+    background-color: #F2F2F2;
+    border-radius: 5px;
+    border: 1px solid #F1F1F1;
+    box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  }
+  .mytable-scrollbar ::-webkit-scrollbar-thumb:hover {
+    background-color: #F2F2F2;
+  }
+  .mytable-scrollbar ::-webkit-scrollbar-thumb:active {
+    background-color: #F2F2F2;
+  }
+  /*边角，即两个滚动条的交汇处*/
+  .mytable-scrollbar ::-webkit-scrollbar-corner {
+    background-color: #FFFFFF;
+  }
+
+//  表格头部统一样式
+.vxe-table--header-wrapper{
+  font-size: 15px !important;;
+ 
+ }
+
+//  页码器样式
+.el-pagination{
+    float: right;
+    margin-right: 40px;
+}
+
+.fixed-header{
+    background: #ECF1FD;
+}
+
+// 横栏tatol样式
+ .fixed-header .tags-view .icon[data-v-13877386]{
+    // background: red;
+    height: 70px;
+    padding-top: 22px;
+ }
+
+ .fixed-header[data-v-13877386]{
+top:64px !important
+ }

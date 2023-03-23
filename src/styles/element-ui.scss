@@ -1,0 +1,38 @@
+.el-form .el-form-item__label {
+  font-size: 16px !important;
+  font-family: MicrosoftYaHei-, MicrosoftYaHei !important;
+  font-weight: normal !important;
+  color: #666666 !important;
+}
+.form_row {
+  .el-form-item {
+    display: flex;
+
+    .el-form-item__content {
+      flex: 1;
+      margin-left: 0 !important;
+
+      .el-select,
+      .el-date-editor {
+        width: 100%;
+      }
+    }
+
+    .el-input-number {
+      width: 100%;
+
+      .el-input__inner {
+        text-align: left;
+      }
+    }
+  }
+}
+
+.el-dialog-div {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-align: center;
+}
+.el-dialog-div::-webkit-scrollbar {
+  display: none;
+}

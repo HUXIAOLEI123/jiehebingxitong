@@ -1,0 +1,264 @@
+.searchbox{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+/* 	搜索按钮 */
+.searchBtn {
+  width: 83px; 
+  height: 36px;
+  text-align: center;
+  font-size: 14.5px;
+  font-family: MicrosoftYaHei;
+  font-weight: normal;
+  border-radius: 18px 18px 18px 18px;
+  background: #247fff;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.searchBtn:hover {
+  background: #65a5ff;
+  color: #fff;
+}
+.room{
+		
+		  height: 100vh;
+		  overflow-y: scroll;
+		  &::-webkit-scrollbar {
+		    display: none;
+		  }
+	}
+.ResetBtn {
+  width: 83px;
+  height: 36px;
+  text-align: center;
+  font-size: 14.5px;
+  font-family: MicrosoftYaHei;
+  font-weight: normal;
+  border-radius: 18px 18px 18px 18px;
+  color: #666666;
+  border: 1.5px solid #D1D1D1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ResetBtn:hover {
+  background: none;
+  color: none;
+}
+/* 搜索按钮图标 */
+.searchBtnicon {
+  font-size: 16px;
+  margin-right: 7px;
+  color: #fff;
+}
+.Btn:hover {
+	opacity: 0.7;
+}
+
+/* 普通按钮图标 */
+.Btnicon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  // color: #666666;
+  // font-weight: 600;
+}
+/* 添加按钮 */
+.addBtn {
+  width: 83px;
+  height: 36px;
+  text-align: center;
+  font-size: 15px;
+  font-family: MicrosoftYaHei-, MicrosoftYaHei;
+  font-weight: normal;
+  border-radius: 12px 12px 12px 12px;
+  background: #247fff;
+  color: #fff;
+}
+.addBtnimg{
+	width: 15px;
+	height: 15px;
+	float: left;
+	margin-left: -5px;
+	margin-right: 6px;
+	margin-top: -1px;
+}
+//删除按钮
+.batchBtn{
+	width: 115px;
+	height: 38px;
+	text-align: center;
+	font-size: 15px;
+	font-family: MicrosoftYaHei-, MicrosoftYaHei;
+	font-weight: normal;
+	border-radius: 12px 12px 12px 12px;
+	color: #fff;
+}
+//导出按钮
+.exportBtn{
+	width: 83px;
+	height: 36px;
+	text-align: center;
+	font-size: 15px;
+	font-family: MicrosoftYaHei-, MicrosoftYaHei;
+	font-weight: normal;
+	border-radius: 12px 12px 12px 12px;
+	background: #30BF78;
+	color: #fff;
+}
+//导入
+.importBtn{
+	width: 83px;
+	height: 36px;
+	text-align: center;
+	font-size: 15px;
+	font-family: MicrosoftYaHei-, MicrosoftYaHei;
+	font-weight: normal;
+	border-radius: 12px 12px 12px 12px;
+	background: #FAAD14;
+	color: #fff;
+}
+.exportBtn:hover{
+	opacity: 0.7;
+}
+.addBtnicon {
+  font-size: 15px;
+}
+/* 分割线 */
+.Divider {
+  background: #cacaca;
+  width: 1px;
+  height: 15px;
+}
+//列表按钮
+.butt {
+  width: 100%;
+  padding-right: 20px;
+  height: 30px;
+  margin-bottom: 20px;
+}
+/* 弹框头部样式 */
+.dialog-title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+/* 弹框头部样式icon */
+.sectionstly {
+  width: 4px;
+  height: 15px;
+  background: #247fff;
+  border-radius: 11px 11px 11px 11px;
+  margin-right: 5px;
+}
+/* 弹框头部高度 */
+.el-dialog .el-dialog__header{
+	height: 50px;
+}
+/* 弹框内容距离顶部的高度 */
+.el-dialog__body{
+	padding-top: 10px;
+}
+/* 弹框头部样式字体样式 */
+.title-text {
+  font-size: 15px;
+  font-family: Microsoft YaHei-Bold, Microsoft YaHei;
+  font-weight: bold;
+  color: #252d57;
+  line-height: 9px;
+  margin-left: 5px;
+}
+//弹框内容滚动
+.contentbox{
+	width: 100%;
+	height: 460px;
+	overflow: hidden;
+	overflow-y: scroll;
+	// ::-webkit-scrollbar:;
+}
+//隐藏滚动条
+.contentbox::-webkit-scrollbar { width: 0 !important }
+/* 弹框低部取消样式 */
+.cancelbtn {
+  width: 99px;
+  height: 40px;
+  border-radius: 28px 28px 28px 28px;
+  border: 1px solid #c9cfda;
+  font-size: 15px;
+  font-family: MicrosoftYaHei-, MicrosoftYaHei;
+  font-weight: normal;
+  color: #252d57;
+}
+/* 弹框低部保存样式 */
+.savebtn {
+  width: 99px;
+  height: 40px;
+  border-radius: 28px 28px 28px 28px;
+  background: #247fff;
+  font-size: 15px;
+  font-family: MicrosoftYaHei-, MicrosoftYaHei;
+  font-weight: normal;
+  color: #fff;
+}
+/* 弹框调整lable边距 */
+.el-dialog .el-dialog__body .el-form .el-form-item__label{
+	padding-right: 10px;
+}
+.el-dialog__footer{
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+//分页器样式
+.app-pagination{
+	width: 100%;
+	height: 70px;
+	padding: 20px 32px 0 32px;
+}
+.el-dialog .el-dialog__header{
+	border-radius: 10px 10px 0 0;
+}
+.el-dialog__footer{
+	border-radius: 0px 0px 10px 10px;
+}
+.el-dialog{
+	border-radius:10px;
+}
+
+//消息框样式
+.el-message-box{
+		border-radius: 11px;
+	}
+	.el-message-box__container{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		/* align-items: center; */
+		height: 120px;
+	}
+	.el-message-box__message{
+		margin-top: 80px;
+		font-size: 14px;
+		font-family: Microsoft YaHei-Regular, Microsoft YaHei;
+		font-weight: 400;
+		color: #666666;
+	}
+	.el-message-box__header{
+		background: #F4F6FA;
+	}
+	.el-message-box__status.el-icon-error{
+		margin-top: -20px;
+		/* margin-bottom: 50px; */
+	}
+	.el-message-box__status.el-icon-warning{
+		margin-top: -20px;
+	}
+	.el-message-box__status{
+		font-size: 48px !important;
+	}
+	.el-message-box__btns{
+		background: #F4F6FA;
+	}

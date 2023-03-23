@@ -1,0 +1,688 @@
+@import './variables.scss';
+@import './mixin.scss';
+@import './transition.scss';
+@import './element-ui.scss';
+@import './sidebar.scss';
+@import './btn.scss';
+@import './header.scss';
+
+body {
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+
+body::-webkit-scrollbar {/*滚动条整体样式*/
+  width:8px;     /*高宽分别对应横竖滚动条的尺寸*/
+  height: 8px;
+  background-color: #FFF;
+  scrollbar-arrow-color:#FFF;
+}
+body::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+  border-radius:4px;
+  background:#CECECE;;
+  transition: 0.3s background-color;
+  scrollbar-arrow-color:#DDDDDD;
+}
+body::-webkit-scrollbar-track {/*滚动条里面轨道*/
+  -webkit-box-shadow: inset 0 0 5px rgba(233, 240, 250, 1);
+  box-shadow: inset 0 0 5px rgba(233, 240, 250, 1);
+  border-radius: 0;
+  background: rgba(233, 240, 250, 1);
+}
+
+label {
+  font-weight: 510;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.no-padding {
+  padding: 0px !important;
+}
+
+.padding-content {
+  padding: 4px 0;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+.fr {
+  float: right;
+}
+
+.fl {
+  float: left;
+}
+
+.pr-5 {
+  padding-right: 5px;
+}
+
+.pl-5 {
+  padding-left: 5px;
+}
+
+.block {
+  display: block;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.inlineBlock {
+  display: block;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+aside {
+  background: #eef1f6;
+  padding: 8px 24px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+  display: block;
+  line-height: 32px;
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #2c3e50;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  a {
+    color: #337ab7;
+    cursor: pointer;
+
+    &:hover {
+      color: rgb(32, 160, 255);
+    }
+  }
+}
+
+.components-container {
+  margin: 30px 50px;
+  position: relative;
+}
+
+.pagination-container {
+  margin-top: 30px;
+}
+
+.text-center {
+  text-align: center
+}
+
+.sub-navbar {
+  height: 50px;
+  line-height: 50px;
+  position: relative;
+  width: 100%;
+  text-align: right;
+  padding-right: 20px;
+  transition: 600ms ease position;
+  background: linear-gradient(90deg, rgba(32, 182, 249, 1) 0%, rgba(32, 182, 249, 1) 0%, rgba(33, 120, 241, 1) 100%, rgba(33, 120, 241, 1) 100%);
+
+  .subtitle {
+    font-size: 20px;
+    color: #fff;
+  }
+
+  &.draft {
+    background: #d0d0d0;
+  }
+
+  &.deleted {
+    background: #d0d0d0;
+  }
+}
+
+.link-type,
+.link-type:focus {
+  color: #337ab7;
+  cursor: pointer;
+
+  &:hover {
+    color: rgb(32, 160, 255);
+  }
+}
+
+.filter-container {
+  padding-bottom: 10px;
+
+  .filter-item {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 10px;
+  }
+}
+
+//refine vue-multiselect plugin
+.multiselect {
+  line-height: 16px;
+}
+
+.multiselect--active {
+  z-index: 1000 !important;
+}
+//main-container全局样式
+.app-container {
+  width: 100%;
+  height: 100%;  
+  padding: 12px 32px 0 32px;
+  /*****搜索********/
+  .app-search{
+    .margin-l-7{
+      margin-left: 7px;
+    }
+    .float-r{float:right;}
+    
+    .el-form{
+      .el-form-item__label{
+        padding: 0;
+      }
+      .el-form-item{
+        margin-bottom: 10px;
+        width: 100%;
+        .el-form-item__content{
+          // width: calc(100% - 6.25rem);
+          .el-select{width: 100%;}
+          input{
+            margin-left: 5px;
+          }
+          font-size: 15px;
+          font-family: Microsoft YaHei;
+          font-weight: 400;
+          color: #666666;
+        }        
+      }  
+      .form-item-flex .el-form-item__content{display: flex;}
+      .item-group-2{
+        .to{margin: 0 5px;text-align: center;}
+        // .el-date-editor.el-input{width:calc((100% - 20px) / 2)}
+      }    
+    }
+
+    .el-form.el-form-wid5{
+      .el-form-item{
+        .el-form-item__content{
+          width: calc(100% - 3.125rem);
+        }  
+      }
+    }
+    .el-form.el-form-wid6{
+      .el-form-item{
+        .el-form-item__content{
+          width: calc(100% - 3.75rem);
+        } 
+      }
+    }
+    .el-form-wid7{
+      .el-form-item{
+        .el-form-item__content{
+          width: calc(100% - 4.375rem);
+        } 
+      }
+    }
+    .el-form.el-form-wid8{
+      .el-form-item{
+        .el-form-item__content{
+          width: calc(100% - 5rem);
+        } 
+      }
+    }
+    .el-form.el-form-wid9{
+      .el-form-item{
+        .el-form-item__content{
+          width: calc(100% - 5.625rem);
+        } 
+      }
+    }
+    .el-form.el-form-wid10{
+      .el-form-item{
+        .el-form-item__content{
+          width: calc(100% - 6.25rem);
+        } 
+      }
+    }
+    .el-form.el-form-wid12{
+      .el-form-item{
+        .el-form-item__content{
+          width: calc(100% - 7.5rem);
+        } 
+      }
+    }
+
+    .el-form{
+      .el-form-item-wid0{
+        .el-form-item__content{
+          width: 100%;
+        }        
+      }  
+      .el-form-item-widm5{
+        .el-form-item__content{
+          width: calc(100% - 0.3125rem);
+        }  
+      }
+      .el-form-item-wid4{
+        .el-form-item__content{
+          width: calc(100% - 2.5rem);
+        }  
+      }
+      .el-form-item-wid5{
+        .el-form-item__content{
+          width: calc(100% - 3.125rem);
+        }  
+      }
+      .el-form-item-wid6{
+        .el-form-item__content{
+          width: calc(100% - 3.75rem);
+        } 
+      }
+      .el-form-item-wid7{
+        .el-form-item__content{
+          width: calc(100% - 4.375rem);
+        } 
+      }
+      .el-form-item-wid8{
+        .el-form-item__content{
+          width: calc(100% - 5rem);
+        } 
+      }
+      .el-form-item-wid10{
+        .el-form-item__content{
+          width: calc(100% -  6.25rem);
+        } 
+      }
+      .el-form-item-wid12{
+        .el-form-item__content{
+          width: calc(100% -  7.5rem);
+        } 
+      }
+    }
+  }
+  /*****表格******/
+  .app-table{
+    background-color: #fff;
+    padding: 21px 0 20px 0;     
+    .app-btn{
+      margin-bottom: 30px;     
+    }
+    .el-link{
+      margin-right: 10px;
+    }        
+    img{
+      object-fit: cover;
+    }
+  }
+  // 表格里的操作按钮
+  .operate{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .tab{
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+      img{width: 14px;height: 14px;margin-right:2px;}
+      span{
+        font-size: 14px;
+        font-family: Microsoft YaHei;
+        font-weight: 400;            
+      }
+      .redText{color: #FF0000;}
+      .orgText{color: #FD6002;}
+      .blueText{color: #126ACC;}
+      .greenText{color: #0EB926;}
+      .grayText{color:#CCCCCC;}
+      .roseText{color:#F03093;}
+    }
+  }
+  // 各种状态颜色
+  .table-column-state{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .round{
+        width: 7px;
+        height: 7px;
+        background: #3699FF;
+        border-radius: 50%;
+        margin-right: 2px;
+    }
+    .green{background: #0EB926;}
+    .violet{background: #CD8AFC;}
+    .orange{background:#FEA439}
+    .gray{background:#CCCCCC}
+  }
+
+}
+
+/*********弹框表单**********/
+.el-dialog,.el-drawer{
+  border-radius: 2px;
+  .el-dialog__header,.el-drawer__header{
+    height: 40px;
+    background: #EAF7FF;
+    padding: 0 17px 0 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .el-dialog__title{    
+      font-size: 15px;
+      font-family: Microsoft YaHei;
+      font-weight: bold;
+      color: #222222;
+    }
+    .el-dialog__headerbtn,.el-drawer__close-btn{
+      position: static;   
+      .el-dialog__close{font-size: 20px;font-weight: bold;color: #666;} 
+    }
+  }
+  .el-drawer__header{
+    font-size: 15px;
+    font-family: Microsoft YaHei;
+    font-weight: bold;
+    color: #222222;
+    margin: 0;
+  }
+  .el-dialog__body,.el-drawer__body{
+    .title{        
+      font-size: 14px;
+      font-family: Microsoft YaHei;
+      font-weight: bold;
+      color: #222222;
+      line-height: 50px;
+    }
+    .el-form{
+      .el-form-item__label{  
+        width: 100px;
+        font-size: 14px;
+        font-family: Microsoft YaHei;
+        font-weight: bold;
+        color: #333333;
+        padding-right: 0;
+      }  
+      .el-form-item{
+        width: 100%;
+        margin-right: 0;
+        .img-uploader{
+          .el-upload {
+              border: 1px dashed #d9d9d9;
+              border-radius: 6px;
+              cursor: pointer;
+              position: relative;
+              overflow: hidden;
+              &:hover {        
+                border-color: #409EFF;
+                .el-icon-delete{display: block;}
+              }
+          }
+          .img-uploader-icon {
+              font-size: 28px;
+              color: #8c939d;
+              width: 100px;
+              height: 100px;
+              line-height: 100px;
+              text-align: center;
+          }
+          .img{
+              width: 100px;
+              height: 100px;
+              display: block;
+          }
+          .el-icon-delete{
+              display: none;
+              font-size: 24px;
+              position: absolute;
+              top: 0;
+              right: 0;
+              color: red;
+          }
+        }
+      }
+      .el-form-item.form-item-per-100{
+        width: 100%;
+      }
+      .form-item-bottom-0{margin-bottom: 0;}
+      .form-item-bottom-5{margin-bottom: 5px;}
+      .el-form-item__content{width:calc(100% - 6.25rem)}
+      .el-select,.el-date-editor,.el-select .el-input{width: 100%}
+      .item-group-2{
+        .el-form-item__content{
+          .to{margin: 0 5px;text-align: center;}
+          .el-date-editor.el-input,
+          .el-select{width:calc((100% - 20px) / 2)}
+        }
+      } 
+    }
+    .el-form--inline{
+      .el-form-item{
+        width: 50%;
+      }
+    }  
+    .el-form.el-form-wid12{
+      .el-form-item{
+        .el-form-item__content{
+          width: calc(100% - 7.5rem);
+        }        
+      }  
+    }
+
+    .form-item-avatar{
+      .avatar{
+          width:90px;
+          height: 90px;
+          border: 1px dashed #d9d9d9;
+          border-radius:5px;
+          overflow: hidden;
+          img{width: 100%;height: 100%;}
+      }      
+    }
+
+    .form-disabled{
+      .el-form-item{
+        margin-bottom: 0;
+        .el-form-item__label,.el-form-item__content{
+            padding-right: 0 !important;
+            line-height:30px;
+        }
+        .el-input.is-disabled .el-input__inner{
+          height: 30px;
+          line-height:30px;
+        }
+        .el-input.is-disabled .el-input__inner,
+        .el-textarea.is-disabled .el-textarea__inner{
+            background-color:#fff;
+            border-color:#fff;
+            border-width: 0;
+            color:#222222;
+            padding: 0;
+            resize: none;
+        }
+        .el-input__suffix,.el-input__prefix{display:none;}
+        .el-select .el-input.is-disabled .el-input__inner:hover{border-color:#fff;}
+        .el-form-item-span{
+          color: #222222;
+        }
+      }  
+    }
+
+  }
+  .el-dialog__footer{border-top: 1px solid #EBEEF5;}
+
+  .upload-file-list{
+      width: 100%;
+      .file{
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 3px;
+          .name{
+              flex: 2;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              font-size: 14px;
+              font-family: Microsoft YaHei;
+              font-weight: 400;
+              color: #606266;
+              cursor: pointer;
+              display: flex;
+              align-items: center;
+              .file-icon{
+                  width: 16px;
+                  height: 16px;
+                  margin-right: 5px;
+              }
+              &:hover{color: #126ACC;}
+          }
+          .el-input{
+              width: 140px;
+              height: 35px;
+              .el-input__inner{
+                  height: 35px;
+                  line-height: 35px;
+              }
+          }
+          .delete{
+              padding: 0 10px;
+              cursor: pointer;
+              &:hover{
+                  .el-icon-close{color: red;}
+              }
+          }
+      }
+  }
+}
+.el-dialog::-webkit-scrollbar{/*滚动条整体样式*/
+  width: 8px;     /*高宽分别对应横竖滚动条的尺寸*/
+  height: 8px;
+  background-color: #fff;
+  scrollbar-arrow-color:#fff;
+}
+.el-dialog::-webkit-scrollbar-thumb{/*滚动条里面小方块*/
+  border-radius:4px;
+  background:#B6B7B9;
+  transition: 0.3s background-color;
+  scrollbar-arrow-color:#DDDDDD;
+}
+.el-dialog::-webkit-scrollbar-track{/*滚动条里面轨道*/  
+  border-radius: 0;
+  background: #fff;
+}
+.risk-span{
+  width: 40px;
+  height: 70%;
+  margin-top: 1%;
+  float: left;
+}
+.risk-span-green{
+  background-color: #7CFC00;
+}
+.risk-span-yellow{
+  background-color: #FFFF00;
+}
+.risk-span-orange{
+  background-color: #FFA500;
+}
+.risk-span-red{
+  background-color: #FF4500;
+}
+.risk-span-violet{
+  background-color: #934496;
+}
+/************分割线样式*************/
+.gw-divider{
+  width: 100%;
+  border: 1px solid #DCDFE6;
+  padding:20px;
+  position: relative;
+  .gw-divider__text{
+    position: absolute;
+    background-color: #FFFFFF;   
+    padding: 0 15px; 
+    font-size: 20px;
+    font-family: Microsoft YaHei;
+    font-weight: bold;
+    color: #222222;
+    line-height: 40px;
+    height: 40px;
+    top: -20px;
+    left: 20px;
+  }
+}
+.el-divider__text{
+  font-weight: bold;
+}
+.drg_font_style{
+  font-size: 14px;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #222222;
+}
+
+.gw-el-descriptions{
+  .el-descriptions__body{
+    .el-descriptions-item{
+      .descriptions-item-w5{
+        width: 50px;
+      }
+      .descriptions-item-w6{
+        width: 60px;
+      }
+      .descriptions-item-w8{
+        width: 80px;
+      }
+      .descriptions-item-w9{
+        width: 90px;
+      }
+      .descriptions-item-w10{
+        width: 100px;
+      }
+      .descriptions-item-w12{
+        width: 120px;
+      }
+    }
+  }
+}

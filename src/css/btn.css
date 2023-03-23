@@ -1,0 +1,161 @@
+:export {
+  menuText: #222222;
+  menuActiveText: #1B65B9;
+  menuActiveBg: #EAF7FF;
+  subMenuActiveText: #1B65B9;
+  menuBg: #FFFFFF;
+  menuHover: #EAF7FF;
+  subMenuBg: #FFFFFF;
+  subMenuHover: #EAF7FF;
+  sideBarWidth: 200px;
+  appHeaderHeight: 60px;
+  appHeaderSystemHeight: 60px;
+  navbarHeight: 0;
+  menuIcon: #37383A;
+  menuActiveIcon: #1B65B9;
+  baseSize: 16;
+}
+
+.blue-btn {
+  background: #1B65B9;
+}
+
+.blue-btn:hover {
+  color: #1B65B9;
+}
+
+.blue-btn:hover:before, .blue-btn:hover:after {
+  background: #1B65B9;
+}
+
+.light-blue-btn {
+  background: #1B65B9;
+}
+
+.light-blue-btn:hover {
+  color: #1B65B9;
+}
+
+.light-blue-btn:hover:before, .light-blue-btn:hover:after {
+  background: #1B65B9;
+}
+
+.red-btn {
+  background: #C03639;
+}
+
+.red-btn:hover {
+  color: #C03639;
+}
+
+.red-btn:hover:before, .red-btn:hover:after {
+  background: #C03639;
+}
+
+.pink-btn {
+  background: #E65D6E;
+}
+
+.pink-btn:hover {
+  color: #E65D6E;
+}
+
+.pink-btn:hover:before, .pink-btn:hover:after {
+  background: #E65D6E;
+}
+
+.green-btn {
+  background: #67C23A;
+}
+
+.green-btn:hover {
+  color: #67C23A;
+}
+
+.green-btn:hover:before, .green-btn:hover:after {
+  background: #67C23A;
+}
+
+.tiffany-btn {
+  background: #4AB7BD;
+}
+
+.tiffany-btn:hover {
+  color: #4AB7BD;
+}
+
+.tiffany-btn:hover:before, .tiffany-btn:hover:after {
+  background: #4AB7BD;
+}
+
+.yellow-btn {
+  background: #FEC171;
+}
+
+.yellow-btn:hover {
+  color: #FEC171;
+}
+
+.yellow-btn:hover:before, .yellow-btn:hover:after {
+  background: #FEC171;
+}
+
+.pan-btn {
+  font-size: 14px;
+  color: #fff;
+  padding: 14px 36px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  -webkit-transition: 600ms ease all;
+  transition: 600ms ease all;
+  position: relative;
+  display: inline-block;
+}
+
+.pan-btn:hover {
+  background: #fff;
+}
+
+.pan-btn:hover:before, .pan-btn:hover:after {
+  width: 100%;
+  -webkit-transition: 600ms ease all;
+  transition: 600ms ease all;
+}
+
+.pan-btn:before, .pan-btn:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  -webkit-transition: 400ms ease all;
+  transition: 400ms ease all;
+}
+
+.pan-btn::after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+
+.custom-button {
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  background: #fff;
+  color: #fff;
+  -webkit-appearance: none;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: 0;
+  margin: 0;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+/*# sourceMappingURL=btn.css.map */

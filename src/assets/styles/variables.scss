@@ -1,0 +1,59 @@
+// base color
+// $blue: #5B8CFF;
+$blue: #5B8CFF;
+$light-blue: #E8EFFF;
+$dark-blue: #4877E8;
+$red: #FF4A57;
+$pink: #F56C6C;
+$green: #30B08F;
+$tiffany: #4AB7BD;
+$yellow:#FEC171;
+$panGreen: #30B08F;
+// 默认菜单主题风格
+$base-menu-color:#222222;
+$base-menu-color-active:#3167E9;
+$base-menu-background:#fff;
+$base-logo-title-color: #ffffff;
+$base-menu-light-color:rgba(0, 0, 0, .70);
+$base-menu-dark-background:#304156;
+$base-logo-light-title-color: #001529;
+$base-sub-menu-background:rgba(50, 106, 236, .8);
+$base-sub-menu-hover:rgba(50, 106, 236, .8);
+$base-light-sub-menu-background: #fff;
+$base-light-sub-menu-hover: rgba(16, 229, 62, 0.8);
+// 基础色
+$base-color-blue: $blue;
+$base-color-white: #fff;
+// 默认侧边栏的宽度
+$base-sidebar-width: 258px;
+// 折叠后侧边栏宽度
+$collospe-sidebar-width: 54px;
+
+// navbar高度
+$base-navbar-height: 50px;
+// 头部高度
+$base-header-height: 60px;
+// tags-view高度
+$base-tags-views-height: 34px;
+// 侧边栏用户信息高度
+$base-sidebar-user-info-height: 100px;
+// dialog头部背景色
+$base-dialog-header-bg: $light-blue;
+// 表格头部背景色
+$base-table-header-bg: #F6F9FB;
+
+// 导出样式变量
+:export {
+    menuColor: $base-menu-color;
+    menuLightColor: $base-menu-light-color;
+    menuColorActive: $base-menu-color-active;
+    menuBackground: $base-menu-background;
+    menuDarkBackground: $base-menu-dark-background;
+    subMenuBackground: $base-sub-menu-background;
+    lightSubMenuBackground: $base-light-sub-menu-background;
+    subMenuHover: $base-sub-menu-hover;
+    lightSubMenuHover: $base-light-sub-menu-hover;
+    sideBarWidth: $base-sidebar-width;
+    logoTitleColor: $base-logo-title-color;
+    logoLightTitleColor: $base-logo-light-title-color
+}
